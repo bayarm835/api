@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estimate.css') }}">
+
+</head>
+<body>
+    <div class="header">
+        <div class="logout-button-container">
+            <form action="/logout" method="get">
+                <button type="submit" class="logout-button">Déconnexion</button>
+            </form>
+        </div>
+    </div>
+    <h1>Estimation</h1>
+    
+    <form action="/estimate" method="post">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required><br><br>
+
+        <label for="kilometers_driven">Kilometers Driven:</label>
+        <input type="number" id="kilometers_driven" name="kilometers_driven" required><br><br>
+
+        <label for="fuel_type">Fuel Type:</label>
+        <input type="text" id="fuel_type" name="fuel_type" required><br><br>
+
+        <label for="transmission">Transmission:</label>
+        <input type="text" id="transmission" name="transmission" required><br><br>
+
+        <label for="owner_type">Owner Type:</label>
+        <input type="text" id="owner_type" name="owner_type" required><br><br>
+
+        <label for="mileage">Mileage:</label>
+        <input type="number" id="mileage" name="mileage" required><br><br>
+
+        <label for="seats">Seats:</label>
+        <input type="number" id="seats" name="seats" required><br><br>
+
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" required><br><br>
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required><br><br>
+
+        <label for="engine_numeric">Engine Numeric:</label>
+        <input type="number" id="engine_numeric" name="engine_numeric" required><br><br>
+
+        <label for="power_numeric">Power Numeric:</label>
+        <input type="number" id="power_numeric" name="power_numeric" required><br><br>
+
+        <label for="is_sold_new">Is Sold New:</label>
+        <input type="text" id="is_sold_new" name="is_sold_new" required><br><br>
+
+        <button type="submit">Estimate</button>
+        
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Se connecter</h1>
+    <form action="/login" method="post">
+        <label for="username">Nom d'utilisateur:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

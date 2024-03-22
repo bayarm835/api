@@ -1,0 +1,60 @@
+/* Style du formulaire */
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Style des labels */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style du bouton */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style du titre */
+h1 {
+    text-align: center;
+}
+.header {
+    position: relative;
+    padding: 10px;
+}
+
+.logout-button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-right: 30px;
+}
+
+.logout-button {
+    width: auto; /* Empêche le bouton de prendre toute la largeur */
+}
+

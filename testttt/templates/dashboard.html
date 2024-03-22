@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Ajoutez vos styles CSS pour la mise en forme de la page */
+    </style>
+</head>
+<body>
+    <h1>Tableau de bord des véhicules</h1>
+    <a href="{{ url_for('estimate') }}"><button>Retour à l'estimation</button></a>
+    <!-- Bouton de déconnexion -->
+    <a href="{{ url_for('logout') }}"><button>Déconnexion</button></a>
+    <form action="/search" method="post">
+        <input type="text" name="search_query" placeholder="Rechercher par marque">
+        <button type="submit">Rechercher</button>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th>Modèle</th>
+                <th>Prix</th>
+                <th>Kilométrage</th>
+                <th>Lieux</th>
+                <th>Année</th>
+                <th>Type de carburant</th>
+                <th>Nb prop.</th>
+                <th>Puissance</th>
+                <th>Cylindre</th>
+                <th>Nombre de places</th>
+                <th>Conso.</th>
+                <th>Vendu neuf</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+            <tr>
+                <td>{{ car[0] }}</td>
+                <td>{{ car[1] }}</td>
+                <td>{{ car[2] }}</td>
+                <td>{{ car[3] }}</td>
+                <td>{{ car[4] }}</td>
+                <td>{{ car[5] }}</td>
+                <td>{{ car[6] }}</td>
+                <td>{{ car[7] }}</td>
+                <td>{{ car[8] }}</td>
+                <td>{{ car[9] }}</td>
+                <td>{{ car[10] }}</td>
+                <td>{{ car[11] }}</td>
+                <td>{{ car[12] }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
